@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--match_parent : 부모크기만큼 크기(늘림)
+        wrap_content : 위젯의 기본 크기 또는 위젯이 담고있는
+        내용의 크기에 따라서 바뀜(가변)
+        id : @+id/ : 위젯을 식별할수있는 고유한값
+        gravity :
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가나다라마바사아자차카타파하2123"
+        android:textSize="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp" />
+    <!-- Gravity(중력) : 내부에 (중력) 정렬 (내용)
+          | <- 왼쪽|아래
+
+          Layout_Gravity : 위젯자체에 (중력) 정렬 요소가 바로 움직임
+          LinearLayout에서는 orientation속성에 의해서 좌우 또는 상하하
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|bottom"
+        android:text="버튼" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="버튼" />
+
+
+</LinearLayout>
