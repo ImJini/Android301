@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <!-- ViewGroup : Layout들 자식요소를 가질수있는 Layout
-    wrap_content : Layout은 0이다.
-    ※ Layout종류는 무조건 자식요소를 가질수있다 ※
-    비율나누기 : layout_weight , 0dp
-    -->
+<!--    ViewGroup : Layout들 자식요소를 가질수 있는 Layout
+wrap_content: Layout은 0이다.
+Layout종류는 무조건 자식요소를 가질수 있다.
+비율나누기 : layout_weight, 0dp
+-->
     <LinearLayout
         android:layout_weight="2"
         android:background="#123456"
@@ -17,13 +17,16 @@
         android:layout_height="0dp"/>
     <LinearLayout
         android:layout_weight="1"
-        android:background="#B3B3B3"
+        android:background="#252651"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+
     <LinearLayout
         android:layout_weight="1"
         android:background="#123456"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+
+
 
 </LinearLayout>
