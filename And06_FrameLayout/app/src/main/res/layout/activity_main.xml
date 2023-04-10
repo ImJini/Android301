@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이전" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_change1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다음" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+   <FrameLayout
+
+       android:background="#F4F4F4"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="9">
+
+       <ImageView
+           android:id="@+id/img1"
+           android:scaleType="fitXY"
+           android:src="@drawable/image1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+       <ImageView
+           android:id="@+id/img2"
+           android:scaleType="fitXY"
+           android:src="@drawable/image2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+       <ImageView
+           android:id="@+id/img3"
+           android:layout_width="match_parent"
+           android:layout_height="731dp"
+           android:scaleType="fitXY"
+           android:src="@drawable/image3" />
+
+   </FrameLayout>
+
+</LinearLayout>
