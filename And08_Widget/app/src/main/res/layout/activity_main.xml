@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="TextView는 글자를 보여주기 위한 위젯"
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<!--    Web에서 id, pw, 또는 게시글 내용: input, textarea등.. -->
+
+    <EditText
+        android:hint="글자 입력 여기에"
+        android:id="@+id/edt_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="클릭하면 텍스트 뷰로 글자이동"
+        android:id="@+id/btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/parent_view"
+        android:background="#123456"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:hint="0이상의 숫자를 입력하세요"
+        android:id="@+id/edt_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="숫자인지 확인."
+        android:id="@+id/btn_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RadioButton
+        android:checked="true"
+        android:id="@+id/rdo_man"
+        android:text="남"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RadioButton
+        android:id="@+id/rdo_woman"
+        android:text="여"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/rdo_group"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:text="빨강"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:text="파랑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:text="초록"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+
+
+</LinearLayout>

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 //
         
         btn_change.setOnClickListener(v->{
+
             if(flag==3) {
                 flag = 2;
                 img3.setVisibility(View.GONE);
