@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+<!--shape :  모양 그리기(선, 동그라미, 네모등-)-->
+
+<!--gradient :  시작색과 중간, 또는 마지막색을 자연스럽게 보이게함.-->
+    <gradient
+        android:startColor="#123456"
+        android:centerColor="#343F5A"
+        android:endColor="#3366FF"
+        />
+</shape>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--어떤 위젯을 선택했을때 toggle, hover-->
+    <item
+        android:state_pressed="true"
+        android:color="#123456"
+
+        />
+    <item
+        android:state_activated="true"
+        android:color="#126"
+        />
+
+</selector>

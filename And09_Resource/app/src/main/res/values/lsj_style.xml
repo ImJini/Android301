@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dimen에서는 wrap_content나 match_parent속성 사용 불가.-->
+    <!--공통적으로 사용 될 변수 또는 넓이 높이 등의 스타일 등을 밀 정의해 놓고 사용할수있게 한다.-->
+    <string name="my_app_name">LSJApp</string>
+    <color name="ma_app_color">#8FFA12</color>
+    <!--넓이 높이 등의 스타일 ※ layout에서 실제 위젯에 들어가는 값만 허용-->
+    <dimen name="notice_tv_width">100dp</dimen>
+    <dimen name="notice_tv_height">100dp</dimen>
+
+    <!--위젯의 모든 형태를 미리 지정하고 연결만 해주면 해당 모양으로 바뀌게 하는것 ==> style -->
+    <!--넓이 높이 등의 스타일 ※ layout에서 실제 위젯에 들어가는 값만 허용-->
+    <style name="notice_tv_style">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:background">@color/ma_app_color</item>
+    </style>
+<style name="notice_tv_small_style" parent="notice_tv_style">
+    <item name="android:textSize">15dp</item>
+
+</style>
+</resources>

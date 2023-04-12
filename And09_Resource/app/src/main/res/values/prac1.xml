@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="carrut">나의 당근</string>
+    <dimen name="sj_w">1000dp</dimen>
+    <dimen name="sj_h">100dp</dimen>
+
+
+
+
+</resources>
