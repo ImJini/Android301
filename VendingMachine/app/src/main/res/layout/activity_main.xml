@@ -46,6 +46,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
+            <TextView
+                android:text="10개 남음"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
 
             <Button
 
@@ -70,6 +75,11 @@
                 android:layout_weight="1"/>
             <TextView
                 android:text="사이다 800원"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:text="10개 남음"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
@@ -110,6 +120,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
+            <TextView
+                android:text="10개 남음"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
             <Button
 
                 android:id="@+id/btn_fanta"
@@ -135,6 +150,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
+                <TextView
+                    android:text="10개 남음"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
 
                 <Button
 
@@ -156,7 +176,7 @@
         >
 
         <EditText
-            android:id="@+id/money"
+            android:id="@+id/money_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -174,6 +194,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/money_out"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

@@ -7,12 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn_coke, btn_sidar, btn_fanta, btn_demisoda, btn_ok;
-    EditText money;
+    EditText money_in;
+
+    TextView money_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn_ok=findViewById(R.id.btn_ok);
 
-        money=findViewById(R.id.money);
+        money_in=findViewById(R.id.money_in);
+        money_out=findViewById(R.id.money_out);
 
 
         btn_coke.setOnClickListener(this);
@@ -37,11 +43,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_ok.setOnClickListener(this);
 
 
+
+
     }
 
     @Override
     public void onClick(View v) {
-
+        if (v.getId()==btn_ok.getId()){
+            money_out.setText(money_in.getText().toString());
+        }
+        if(v.getId()==btn_coke.getId()){
+            
+        }
 
     }
 }
