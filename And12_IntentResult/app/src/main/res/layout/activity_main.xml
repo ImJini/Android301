@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,5 +15,31 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
       />
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="명시적 인텐트"
+        android:id="@+id/btn_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="암시적 인텐트 전화가능"
+        android:id="@+id/btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="암시적 인텐트 인터넷 가능"
+        android:id="@+id/btn_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="암시적 인텐트 지도 기능"
+        android:id="@+id/btn_gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

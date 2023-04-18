@@ -1,9 +1,11 @@
 package com.example.and12_intentresult;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class LoginDTO implements Serializable {
     private String id,pw;
+
 
 
     public LoginDTO(String id, String pw) {
