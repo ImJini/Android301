@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".list.List1Fragment"
+    android:background="#6695F4"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:listSelector="#B1BED8"
+        android:id="@+id/listv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
