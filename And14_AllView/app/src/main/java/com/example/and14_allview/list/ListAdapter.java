@@ -1,5 +1,6 @@
 package com.example.and14_allview.list;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         //LayoutInflater.from(parent.c) BaseAdapter <- 사용불가
         //RecyclerViewAdapter에서만 사용이 가능.
+        Log.d("어댑터", "getView: "+i);
         view =inflater.inflate(R.layout.item_listview,
                 viewGroup,
                 false
