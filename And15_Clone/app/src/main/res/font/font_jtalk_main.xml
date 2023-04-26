@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+<!--fontWeight 100: Light 얇은것
+                200: 가벼운것
+                300: 큰것
+                400: 일반 또는 미디엄보다 작은 정도
+                500: 미디엄
+                600: 세미볼드
+                700: 굵게-->
+
+
+    <font
+    android:fontStyle="normal"
+    android:font="@font/gothica1_medium"
+    android:fontWeight="400"/>
+    <font
+        android:fontStyle="normal"
+        android:font="@font/gothica1_regular"
+        android:fontWeight="700"/>
+
+
+</font-family>
