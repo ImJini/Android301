@@ -1,17 +1,14 @@
 package com.example.and15_clone;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 
+import com.example.and15_clone.chat.ChatFragment;
 import com.example.and15_clone.databinding.ActivityMainBinding;
 import com.example.and15_clone.friend.FriendFragment;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -26,11 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
         actionBar=getSupportActionBar();//우리 프로젝트 이름이 나오고 있는 액션바를 자바코드로 가져와서 초기화시킴(객체)
         actionBar.setTitle("친구");
+
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        getSupportFragmentManager().beginTransaction().replace(
+                R.id.container, new FriendFragment()).commit();
 
 //        binding.bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 //            @Override
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new FriendFragment();
             } else if (menu.getItemId()==R.id.tab2) {
                 actionBar.setTitle("채팅");
+                fragment = new ChatFragment();
 
             } else if (menu.getItemId()==R.id.tab3) {
                 actionBar.setTitle("뷰");
