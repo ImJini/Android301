@@ -26,6 +26,7 @@ public class FriendFragment extends Fragment {
         // Inflate the layout for this fragment
 
         binding=FragmentFriendBinding.inflate(inflater,container,false);
+
         ArrayList<FriendDTO>list = new ArrayList<>();
         list.add(new FriendDTO(R.drawable.profile_img1, "ㄱ이름", "아 집에가고싶다"));
         list.add(new FriendDTO(R.drawable.profile_img2, "ㄴ이름", "완전 집에가고싶다"));

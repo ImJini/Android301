@@ -28,7 +28,7 @@ public class ChatFragment extends Fragment {
         binding = FragmentChatBinding.inflate(inflater,container,false);
 
         ArrayList<ChatDTO>list = new ArrayList<>();
-        ChatDTO dto = new ChatDTO(R.drawable.profile_img1,"이름1","하이하이","그냥 톡방");
+        // ChatDTO dto = new ChatDTO(R.drawable.profile_img1,"이름1","하이하이","그냥 톡방");
         list.add(new ChatDTO(R.drawable.profile_img1,"이름1","뭐하냐","이름1톡방"));
         list.add(new ChatDTO(R.drawable.profile_img2,"이름2","수고하셨습니다.","알바톡방"));
         list.add(new ChatDTO(R.drawable.profile_img3,"이름3","아 오늘도 열공","공부톡방"));
