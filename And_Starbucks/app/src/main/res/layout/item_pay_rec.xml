@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/img_card"
             android:layout_gravity="center"
-            android:layout_width="390dp"
-            android:layout_height="174dp"
+            android:layout_width="370dp"
+            android:layout_height="155dp"
             android:scaleType="fitXY"
-            android:src="@drawable/pay_card" />
+            android:src="@drawable/pay_card1" />
         <TextView
+            android:id="@+id/tv_card_name"
             android:layout_gravity="center"
             android:text="스타벅스 e 카드"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:id="@+id/tv_card_money"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="50,000원" />
 
         <ImageView
-
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:id="@+id/img_bacode"
+            android:layout_gravity="center"
+            android:layout_width="370dp"
+            android:layout_height="85dp"
             android:scaleType="fitXY"
-            android:src="@drawable/bacode" />
+            android:src="@drawable/bacode1" />
         <TextView
+            android:id="@+id/tv_bacode_time"
             android:layout_gravity="center"
             android:text="바코드 유효시간 11:00"
             android:layout_width="wrap_content"
@@ -42,16 +48,17 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/auto_insert"
                 android:layout_width="26dp"
-                android:layout_height="match_parent"
+                android:layout_height="75dp"
                 android:layout_weight="1"
                 android:src="@drawable/insert" />
-
             <ImageView
+                android:id="@+id/nomal_insert"
                 android:layout_width="4dp"
-                android:layout_height="91dp"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                android:src="@drawable/nomalinsert" />
+                android:src="@drawable/nomalinsert"/>
 
         </LinearLayout>
     </LinearLayout>
