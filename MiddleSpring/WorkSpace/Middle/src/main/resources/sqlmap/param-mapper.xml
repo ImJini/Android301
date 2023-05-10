@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="param">
+	<select id="test1" resultType="String">
+		select #{param}||'DB' from dual
+	</select>
+	<!--param1:A, param2:B, param3:C db에 세개의 파라메터를 전송하여 결과가 하나로 합쳐진 String A-B-C로 
+		만들고 싶다. -->
+
+	<select id="test2" resultType="String">
+		select
+		#{p1}||'-'||#{p2}||'-'||#{p3} from dual
+	</select>
+
+	<select id="test3" resultType="String">
+		select #{p1} col from dual union select #{p2} from dual union select #{p3}
+		from dual
+	</select>
+
+
+
+	<!-- 1줄(rowCount==1) -->
+	<select id="selectRowOne" resultType="com.and.andmember.ParamVO">
+		select 'A' col1, 'jin' col2 from dual
+	</select>
+
+	<!-- 3줄(rowCount==3) -->
+	<select id="selectRowMulti"
+		resultType="com.and.andmember.ParamVO">
+		select 'A' col1, 'jin' co2 from dual union select 'B', 'dkd' from dual union
+		select 'C', 'dod' from dual
+
+	</select>
+
+	<select id="selectRdOne" resultType="com.and.andmember.RandomVO">
+	select 'gugi' menu1, 'ame' col2 from dual
+</select>
+</mapper>
