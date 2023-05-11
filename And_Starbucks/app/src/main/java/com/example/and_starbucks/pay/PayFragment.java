@@ -33,10 +33,15 @@ public class PayFragment extends Fragment {
         list.add(new PayDTO(R.drawable.pay_card4,R.drawable.bacode4,"당 충전용 카드","40,500원","바코드 유효시간 10:00"));
 
         PayAdapter adapter=new PayAdapter(list);
-        LinearLayoutManager manager= new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
         binding.recvPay.setAdapter(adapter);
 
         return binding.getRoot();
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding=null;
     }
 }
