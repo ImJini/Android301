@@ -8,7 +8,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
 	<!-- Spring이 읽어야할 객체가 있는 package는 scan 을 해야함. -->
-	<context:component-scan base-package="com.and.andmember"/>
+	<context:component-scan base-package="com.and.andmember, Member"/>
 	
 	<import resource="classpath:dbconn/default.xml"/>
 	

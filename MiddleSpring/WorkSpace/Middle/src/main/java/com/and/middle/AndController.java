@@ -22,9 +22,10 @@ public class AndController {
 	@RequestMapping(value = "and2.req", produces = "text/html;charset=utf-8")
 	public String andReq2(String andParam) {
 		System.out.println("호출되었다." + andParam);
-		return "";
+		return "abcd";
 	}
-
+//-----------------------------------------------------------------------------
+	
 	@RequestMapping(value = "and1.res", produces = "text/html;charset=utf-8")
 	public String andRes1() {
 		// System.out.println("호출되었다."+andParam);

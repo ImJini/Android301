@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class AndMemberDAO {
+public class XAndMemberDAO {
 
 	// 데이터 베이스에 접근하여, 데이터를 조회해오고 그 결과를 컨트롤러나 필요한 곳에 리턴해준다.
 

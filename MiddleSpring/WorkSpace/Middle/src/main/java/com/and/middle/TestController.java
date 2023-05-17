@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.and.andmember.AndMemberDAO;
+import com.and.andmember.XAndMemberDAO;
 import com.and.andmember.AndMemberVO;
 import com.google.gson.Gson;
 
@@ -20,7 +20,7 @@ public class TestController {
 	@Qualifier("hanul")
 	SqlSession sql;
 	@Autowired
-	AndMemberDAO dao;
+	XAndMemberDAO dao;
 
 	@RequestMapping("test.db")
 	public String test() {
@@ -116,4 +116,5 @@ public class TestController {
 //		}
 //	}
 //
+	
 }
