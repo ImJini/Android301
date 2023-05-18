@@ -1,6 +1,7 @@
 package com.example.and16_lastproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,51 +9,46 @@ import android.util.Log;
 import com.example.and16_lastproject.conn.ApiInterface;
 import com.example.and16_lastproject.conn.CommonConn;
 import com.example.and16_lastproject.conn.Service;
+import com.example.and16_lastproject.databinding.ActivityMainBinding;
+import com.example.and16_lastproject.emp.EmpFragment;
+import com.example.and16_lastproject.godata.GoFragment;
 
 import java.util.HashMap;
 
+import me.ibrahimsn.lib.OnItemReselectedListener;
+import me.ibrahimsn.lib.OnItemSelectedListener;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-//        CommonConn.ConnCallback callback =  new CommonConn.ConnCallback() {
-//            @Override
-//            public void onResult(boolean isResult, String data) {
-//                Log.d("응답옴", "onCreate1: "+isResult);
-//                Log.d("응답옴", "onCreate2: "+ data);
-//
-//            }
-//        };
+        binding.bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public boolean onItemSelect(int i) {
+                Log.d("아이템", "onItemSelect: "+ i);
+                //0번째 아이템 클릭 시 empfragment가 붙게 처리
+                //intent는 (전달, 통신) android 4가지 대표 컴포넌트끼리의 통신, Activity, 브로드 캐스트, 내용 제공자, service (서비스)
+                if(i==0){
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new EmpFragment()).commit();
+                }
+                if(i==1){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container,new GoFragment()).commit();
+                }
+                if(i==2){
 
-        CommonConn conn = new CommonConn(this, "and2.req");
-        conn.onExcute((isResult, data) -> { //해당 부분을 내가 커스텀해서 계속해서 재사용했을때 편리한 구조를 찾아가면 된다.
-            //CommonConn에서 결과가 나오면 메소드를 실행하면 여기가 실행됨
-            //new 또는 lamda로 메소도의 구조를 똑같이 만들어두고 여기가 나중에 실행되게 해놓음
-            Log.d("응답옴", "onCreate3: "+isResult);
-            Log.d("응답옴", "onCreate4: "+ data);
+                }
+
+                return true;
+            }
 
         });
-
-        TestDTO dto = new TestDTO();
-        dto.setField1("1");
-        TestDTO dto2 = dto;
-        conn.test(dto);
-        Log.d("TAG", "onCreate: " + dto.getField1());
-        Log.d("TAG", "onCreate: " + dto2.getField1());
-
-//        conn.onExcute(new CommonConn.ConnCallback() {
-//            @Override
-//            public void onResult(boolean isResult, String data) {
-//
-//            }
-//        });
 
 
     }

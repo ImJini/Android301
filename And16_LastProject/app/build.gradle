@@ -56,4 +56,8 @@ dependencies {
 
     // 컨버터인데 많이 씀 String json 데이터를 처리할때 레트로핏기본기능+사용 : 23-05-09
     implementation group: 'com.squareup.retrofit2', name: 'converter-scalars', version: '2.9.0'
+
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }

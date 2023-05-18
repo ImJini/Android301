@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".emp.EmpFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--화면을 맨밑으로 내리면 새로고침이 되게하는 처리 SwipeRefreshLayout-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_emp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_emp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -45,6 +45,7 @@ public class CommonConn {
         if(context != null&&dialog==null){
             //context를 받아오고, dialog가 아직 세팅이 안된 상태
             dialog =new ProgressDialog(context);
+            dialog.setCancelable(false);//취소를 불가능한다.  true주면 로딩 전에도 움직이기 가능.
             dialog.setProgress(ProgressDialog.STYLE_SPINNER);
             dialog.setTitle("LastProject");
             dialog.setMessage("데이터를 가져오는 중...");
