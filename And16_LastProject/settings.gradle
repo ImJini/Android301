@@ -4,6 +4,10 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven { url 'https://jitpack.io' }
+
+        maven {
+            url 'https://naver.jfrog.io/artifactory/maven/'
+        }
     }
 }
 dependencyResolutionManagement {
@@ -12,7 +16,15 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://naver.jfrog.io/artifactory/maven/'
+        }
+
     }
 }
+
+
 rootProject.name = "And16_LastProject"
+
+
 include ':app'

@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
+import com.example.and_starbucks.Other.OtherFragment;
 import com.example.and_starbucks.databinding.ActivityMainBinding;
 import com.example.and_starbucks.order.OrderFragment;
 import com.example.and_starbucks.pay.PayFragment;
+import com.example.and_starbucks.shop.ShopFragment;
 import com.example.and_starbucks.star.Star_B_Main_Fragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,9 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 fragment=new OrderFragment();
 
             } else if (menu.getItemId()==R.id.tab4) {
+                fragment=new ShopFragment();
 
             } else if (menu.getItemId()==R.id.tab5) {
-
+                fragment= new OtherFragment();
             }else{
                 return false;
             }

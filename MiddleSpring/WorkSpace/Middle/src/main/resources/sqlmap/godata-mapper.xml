@@ -4,9 +4,21 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="godata">
 
-	<select id="list" resultType="godata.GoDTO">
-	select *
-from godata;
+<!-- list 또는 map 등을 이용하여 mybatis를 반복시키기  -->
+<!-- collection=" 내가 가지고 있는 파라미터" item = "컬렉션 자료구조 1건 item"
+	open=" 반복문 시작할때 처음에 넣을 SQL " seperator ="구분자  반복시 찍을 구분자" close="반복문 종료후 찍을 코드 (SQL)"  -->
+	<insert id="insertall">
+	<foreach collection="list" item="item" open="INSERT ALL" separator=" " close="SELECT 1 FROM DUAL" >
+	into tbl_go_st (ID, LAT, LNG, localSpecialStNm, LOCALSPECIALSTINTRO, ADDRROAD, ADDRJIBUN)
+    values (#{item.id}, #{item.lat}, #{item.lng}, #{item.localSpecialStNm}, #{item.localSpecialStIntro}, #{item.addrRoad}, #{item.addrJibun})
+    </foreach>
+	</insert>
+	<select id="selectmap" resultType="godata.GoDTO">
+	select Lat, lng, localSpecialStNm 
+    from tbl_go_st
+	
 	</select>
+	
+	
 	
 </mapper>

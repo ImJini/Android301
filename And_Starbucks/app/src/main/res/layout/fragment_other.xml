@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".Other.OtherFragment">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -195,6 +199,7 @@
 
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:padding="5dp"
         android:layout_marginLeft="15dp"
         android:orientation="horizontal"
@@ -202,6 +207,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+
             android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -230,13 +236,14 @@
             <TextView
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
+                android:text="카드 교환권 등록"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:padding="5dp"
         android:layout_marginLeft="15dp"
         android:orientation="horizontal"
@@ -249,15 +256,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/other_img1"
+                android:src="@drawable/other_img3"
                 android:layout_width="29dp"
                 android:layout_height="28dp"/>
+
             <TextView
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="쿠폰 등록" />
         </LinearLayout>
 
 
@@ -269,13 +277,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/other_img2"
+                android:src="@drawable/other_img4"
                 android:layout_width="29dp"
                 android:layout_height="28dp"/>
             <TextView
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
+                android:text="쿠폰 히스토리"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
@@ -283,7 +291,13 @@
 
     </LinearLayout>
 
-
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F3F3F3"/>
 
     <TextView
         android:padding="5dp"
@@ -294,6 +308,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:padding="5dp"
         android:layout_marginLeft="15dp"
         android:orientation="horizontal"
@@ -306,13 +321,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/other_img1"
+                android:src="@drawable/other_img5"
                 android:layout_width="29dp"
                 android:layout_height="28dp"/>
             <TextView
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
+                android:text="장바구니"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
@@ -323,13 +338,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/other_img2"
+                android:src="@drawable/other_img6"
                 android:layout_width="29dp"
-                android:layout_height="28dp"/>
+                android:layout_height="27dp"/>
             <TextView
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
+                android:text="홀케이크 예약"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
@@ -343,18 +358,19 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/other_img1"
+                android:src="@drawable/other_img7"
                 android:layout_width="29dp"
                 android:layout_height="28dp"/>
             <TextView
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
+                android:text="히스토리"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
@@ -364,23 +380,391 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:src="@drawable/other_img2"
-                android:layout_width="29dp"
-                android:layout_height="28dp"/>
-            <TextView
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="스타벅스 카드등록"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+
         </LinearLayout>
 
     </LinearLayout>
 
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F3F3F3"/>
 
+        <TextView
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:text="Shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/other_img8"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="온라인 스토어"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="주문내역"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/other_img9"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="e-Gift Item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="선물함"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
 
-</LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/other_img10"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="e-Gift Card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="선물내역"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F3F3F3"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:text="Delivers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img11"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="주문하기"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img5"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="장바구니"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img7"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="배달완료 히스토리"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img12"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="단체 주문배달"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F3F3F3"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:text="고객지원"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img13"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="스토어 케어"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img14"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="고객의 소리"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img15"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="매장 정보"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/other_img15"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="반납기 정보"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/other_img17"
+                    android:layout_width="29dp"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="스타벅스 카드등록"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    <TextView
+        android:padding="25dp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:id="@+id/tv_logout"
+        android:text="로그아웃"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

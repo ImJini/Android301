@@ -1,25 +1,16 @@
 package com.example.and16_lastproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.and16_lastproject.conn.ApiInterface;
-import com.example.and16_lastproject.conn.CommonConn;
-import com.example.and16_lastproject.conn.Service;
 import com.example.and16_lastproject.databinding.ActivityMainBinding;
 import com.example.and16_lastproject.emp.EmpFragment;
 import com.example.and16_lastproject.godata.GoFragment;
+import com.example.and16_lastproject.map.MyMapFragment;
 
-import java.util.HashMap;
-
-import me.ibrahimsn.lib.OnItemReselectedListener;
 import me.ibrahimsn.lib.OnItemSelectedListener;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -42,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,new GoFragment()).commit();
                 }
                 if(i==2){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container,new MyMapFragment()).commit();
 
                 }
 
