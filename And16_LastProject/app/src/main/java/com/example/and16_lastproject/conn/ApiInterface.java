@@ -2,11 +2,14 @@ package com.example.and16_lastproject.conn;
 
 import java.util.HashMap;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 import retrofit2.http.Url;
@@ -23,4 +26,10 @@ public interface ApiInterface {
 
     @GET("{url}")
     Call<String> getDataGet(@Path("url")String url, @QueryMap HashMap<String, String>params);
+
+    @POST("file.f")
+    @Multipart /*Multipart 내부에서 enctype이 주어지면 모든 것들은 byte 형태로 데이터가 전송된다.*/
+    Call<String> sendFile(@Part MultipartBody.Part file);
+
+
 }

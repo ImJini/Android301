@@ -1,8 +1,11 @@
 package com.and.middle;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartRequest;
 
 import com.google.gson.Gson;
 
@@ -26,9 +29,24 @@ public class MemberController {
 		AndMemberVO vo = new AndMemberVO();//
 		vo.setId(id);
 		vo.setPassword(pw);
-		//dao.login(vo);
+		// dao.login(vo);
 		return new Gson().toJson(dao.login(vo));
 		// return "호출완료";
 	}
 
+//Form태그 : 태그 사이에 있는 모든 입력 양식을 감싸는 태그로 name, action, method, autocomplate등의
+	// 속성을 가지고 있음 (enctype : 폼데이터가 서버로 전송될 때 파일을 담고 있다면 데이터는 인코딩 과정이 필요)
+	// enctype : mutipart/form-data (파일을 전송하기 위해서 사용됨)
+	@RequestMapping(value = "file.f", produces = "text/html;charset=UTF-8")
+	public String file(HttpServletRequest req) {
+		System.out.println("여기까지 왔는지");
+		MultipartRequest mReq = (MultipartRequest) req;
+		// 파일이 있는 상태의 요청을 받았는지? => MultipartRequest로 캐스팅
+		// 파일이 없는 상태의 요청인지? HttpServletRequest
+		System.out.println(mReq.getFile("file"));
+		// CommonsMultipartResolver : Resolver (
+		// 폼태그나 또는 외부에서 들어오는 데이터가 Mutipart라면 자동으로 인코딩 처리를 하게 만드는 '관리자'
+
+		return null;
+	}
 }

@@ -84,7 +84,6 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
             maker.setPosition(new LatLng(map.get(i).getLat(), map.get(i).getLng()));
             maker.setSubCaptionText(map.get(i).getLocalSpecialStNm());
             maker.setMap(naverMap);
-
         }
 
 

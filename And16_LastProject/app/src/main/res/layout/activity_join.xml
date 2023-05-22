@@ -6,11 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".member.LoginActivity">
+    tools:context=".member.JoinActivity">
 
     <ImageView
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo1"
+        android:id="@+id/imgv_profile"
+        android:src="@drawable/ic_launcher_foreground"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
 
@@ -30,7 +30,6 @@
             android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,20 +49,35 @@
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/chk_login"
-        android:text="로그인 정보 기억하기"
+    <RadioGroup
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/rdo_grp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
+        <RadioButton
+            android:checked="true"
+            android:text="남"
+            android:id="@+id/rdo_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:text="여"
+            android:id="@+id/rdo_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/bnt_login"
+        android:id="@+id/bnt_newlogin"
         android:layout_gravity="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#123"
         android:elevation="5dp"
-        android:text="로그인"
+        android:text="회원가입"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/white"
         app:icon="@drawable/ic_launcher_foreground"
@@ -78,42 +92,27 @@
         app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
         app:strokeColor="#123"
         app:strokeWidth="3dp" />
-    <com.navercorp.nid.oauth.view.NidOAuthLoginButton
-        android:id="@+id/buttonOAuthLoginImg"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bnt_cancel"
         android:layout_gravity="center"
         android:layout_width="200dp"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F42F75"
+        android:elevation="5dp"
+        android:text="취소"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_launcher_foreground"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+        app:iconSize="50dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#123"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:strokeColor="#123"
+        app:strokeWidth="3dp" />
 
-        <ImageView
-
-            android:id="@+id/imgv_kakao"
-            android:layout_gravity="center"
-            android:src="@drawable/kakao_login"
-            android:layout_width="200dp"
-            android:layout_height="50dp"/>
-
-
-
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="아직 회원이 아니라면?"
-                android:textColor="#474747"/>
-
-            <TextView
-                android:id="@+id/tv_join"
-                android:textColor="#017998"
-                android:textStyle="bold|italic"
-                android:text="회원가입"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
 </LinearLayout>
