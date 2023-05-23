@@ -3,7 +3,13 @@ package com.example.and_starbucks;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.and_starbucks.Other.OtherFragment;
 import com.example.and_starbucks.databinding.ActivityMainBinding;
@@ -36,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment= null;
             if (menu.getItemId()==R.id.tab1){
                 fragment =new Star_B_Main_Fragment();
+
+
             } else if (menu.getItemId()==R.id.tab2) {
                 fragment =new PayFragment();
 

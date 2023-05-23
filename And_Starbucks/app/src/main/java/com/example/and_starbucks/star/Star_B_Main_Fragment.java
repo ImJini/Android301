@@ -1,5 +1,7 @@
 package com.example.and_starbucks.star;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -42,6 +44,11 @@ public class Star_B_Main_Fragment extends Fragment {
         binding.recvStarBMain.setAdapter(adatper);
         binding.recvStarBMain.setLayoutManager(manager);
 
+
+        binding.urlGo.setOnClickListener(v->{
+            Intent intent =new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.starbucks.co.kr/index.do"));
+            getActivity().startActivity(intent);
+        });
         return binding.getRoot();
     }
 

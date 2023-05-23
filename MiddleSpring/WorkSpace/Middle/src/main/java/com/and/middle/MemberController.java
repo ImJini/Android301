@@ -1,10 +1,14 @@
 package com.and.middle;
 
+import java.io.File;
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
 
 import com.google.gson.Gson;
@@ -40,10 +44,33 @@ public class MemberController {
 	@RequestMapping(value = "file.f", produces = "text/html;charset=UTF-8")
 	public String file(HttpServletRequest req) {
 		System.out.println("여기까지 왔는지");
+		System.out.println(req.getParameter("vo"));
+		System.out.println(req.getLocalAddr());
+		System.out.println(req.getLocalPort());
+		System.out.println(req.getContextPath()+"/file");
+
 		MultipartRequest mReq = (MultipartRequest) req;
+		// mReq.getFileMap().get("file");
+		// MultipartFile f = mReq.getFile("file");
 		// 파일이 있는 상태의 요청을 받았는지? => MultipartRequest로 캐스팅
 		// 파일이 없는 상태의 요청인지? HttpServletRequest
-		System.out.println(mReq.getFile("file"));
+		// System.out.println(mReq.getFile("file"));
+		MultipartFile mFile = mReq.getFile("file");
+		try {
+			mFile.transferTo(new File("D:\\Study-Android\\MiddleImage\\20230523", "camera.jpg"));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// File f = new File("D:\\study_Android\\MiddleImage\\20230523");
+		// if (f.exists()) {
+		// f.mkdir();
+		// }
+
 		// CommonsMultipartResolver : Resolver (
 		// 폼태그나 또는 외부에서 들어오는 데이터가 Mutipart라면 자동으로 인코딩 처리를 하게 만드는 '관리자'
 

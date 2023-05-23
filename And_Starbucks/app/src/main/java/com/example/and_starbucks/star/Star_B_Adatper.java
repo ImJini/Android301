@@ -1,5 +1,7 @@
 package com.example.and_starbucks.star;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ public class Star_B_Adatper extends RecyclerView.Adapter<Star_B_Adatper.ViewHold
    ItemStarMainRecBinding binding;
    ArrayList<Star_B_DTO>list;
 
+
     public Star_B_Adatper(ArrayList<Star_B_DTO> list) {
         this.list = list;
     }
@@ -26,12 +29,15 @@ public class Star_B_Adatper extends RecyclerView.Adapter<Star_B_Adatper.ViewHold
         binding = ItemStarMainRecBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
 
         return new ViewHolder(binding);
+
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.binding.idBaver1.setImageResource(list.get(position).getImgId());
         holder.binding.tvBvName1.setText(list.get(position).getBvName());
+
     }
 
     @Override

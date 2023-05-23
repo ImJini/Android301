@@ -38,6 +38,7 @@ Context context;
         holder.binding.tvCofMenu.setText(list.get(position).getCof_Menu());
         holder.binding.tvCofEnname.setText(list.get(position).getCof_Enname());
 
+
 //나중에 리스트 보낼때 쓸거임.
 //        holder.binding.imgOrderCof.setOnClickListener(v->{
 //            Intent intent = new Intent(context, MainActivity.class);
