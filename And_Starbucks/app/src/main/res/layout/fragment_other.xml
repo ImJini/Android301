@@ -29,11 +29,11 @@
             android:backgroundTint="#FFFFFF"
             android:src="@drawable/middle_tab3" />
 
-        <ImageButton
-
-            android:scaleType="fitXY"
-            android:layout_width="45dp"
-            android:layout_height="35dp"
+        <ImageView
+            android:layout_marginRight="5dp"
+           android:layout_marginTop="8.5dp"
+            android:layout_width="27dp"
+            android:layout_height="17dp"
             android:backgroundTint="#FFFFFF"
             android:src="@drawable/option" />
 
@@ -69,13 +69,14 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="110dp">
 
         <LinearLayout
             android:elevation="10dp"
             android:layout_margin="10dp"
             android:background="@drawable/round_card"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -97,7 +98,8 @@
             android:background="@drawable/round_card"
             android:elevation="10dp"
             android:layout_margin="10dp"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -118,7 +120,8 @@
             android:background="@drawable/round_card"
             android:elevation="10dp"
             android:layout_margin="10dp"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -140,13 +143,14 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="110dp">
 
         <LinearLayout
             android:background="@drawable/round_card"
             android:elevation="10dp"
             android:layout_margin="10dp"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -167,7 +171,8 @@
             android:background="@drawable/round_card"
             android:elevation="10dp"
             android:layout_margin="10dp"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"

@@ -58,6 +58,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+
             android:id="@+id/bt_beverage"
             android:layout_marginLeft="10dp"
             android:padding="10dp"

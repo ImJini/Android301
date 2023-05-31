@@ -61,6 +61,8 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
         ArrayList<BeverageDTO>list= new ArrayList<>();
 
         if(view.getId() == binding.btBeverage.getId()){
+            binding.btFood.setEnabled(false);
+            binding.btProduct.setEnabled(false);
             list.add(new BeverageDTO(R.drawable.order_cof1,"추천","Recommend"));
             list.add(new BeverageDTO(R.drawable.order_cof2,"리저브 에스프레소","Reserve Espresso"));
             list.add(new BeverageDTO(R.drawable.order_cof3,"리저브 드립","Reserve Drip"));
@@ -79,6 +81,8 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
 
 
         }else if(view.getId() == binding.btFood.getId()){
+            binding.btBeverage.setEnabled(false);
+            binding.btProduct.setEnabled(false);
             list.add(new BeverageDTO(R.drawable.order_food1,"추천","Recommend"));
             list.add(new BeverageDTO(R.drawable.order_food2,"브레드","Bread"));
             list.add(new BeverageDTO(R.drawable.order_food3,"케이크&미니디저트","Cake&Dessert"));
@@ -91,6 +95,8 @@ public class OrderFragment extends Fragment implements View.OnClickListener {
 
 
         }else if(view.getId() == binding.btProduct.getId()){
+            binding.btBeverage.setEnabled(false);
+            binding.btFood.setEnabled(false);
             list.add(new BeverageDTO(R.drawable.order_product1,"추천","Recommend"));
             list.add(new BeverageDTO(R.drawable.order_product2,"머그/글라스","Mug&Glass"));
             list.add(new BeverageDTO(R.drawable.order_product3,"스테인리스텀블러","Stainless steel Tumbler"));
